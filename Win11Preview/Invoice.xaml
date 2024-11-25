@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="Win11Preview.Invoice"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Win11Preview"
+             mc:Ignorable="d" 
+             d:DesignHeight="1122.51" d:DesignWidth="793.7">
+    <UserControl.Resources>
+        <Style x:Key="MyLine" TargetType="Line">
+            <Setter Property="StrokeThickness" Value="1"/>
+            <Setter Property="Stroke" Value="Black"/>
+        </Style>
+    </UserControl.Resources>
+    <Canvas Background="White">
+        <Line X1="6cm" X2="15cm" Y1="3.5cm" Y2="3.5cm" Style="{StaticResource MyLine}"/>
+        <Label x:Name="label1" Content="請 求 書" Canvas.Left="311" Canvas.Top="62" FontSize="46" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBlock x:Name="Number" Canvas.Left="94" TextWrapping="Wrap" Text="Invoice#" Canvas.Top="200" FontSize="20"/>
+        <TextBlock x:Name="Address" Canvas.Left="94" TextWrapping="Wrap" Text="Address" Canvas.Top="250" FontSize="20"/>
+        <TextBlock x:Name="Company" Canvas.Left="94" TextWrapping="Wrap" Text="Company" Canvas.Top="300" FontSize="20" />
+        <Label x:Name="lanel2" Content="請求金額" Canvas.Left="94"  Canvas.Top="350" FontSize="20" HorizontalAlignment="Left"/>
+        <TextBlock x:Name="Amount" Canvas.Left="250" TextWrapping="Wrap" Text="Amount" Canvas.Top="350" FontSize="20"/>
+
+        <Label x:Name="lanel3" Content="品名" Canvas.Left="94"  Canvas.Top="400" FontSize="20" HorizontalAlignment="Left"/>
+        <TextBlock x:Name="Memo" Canvas.Left="250" TextWrapping="Wrap" Text="Memo" Canvas.Top="450" FontSize="20"/>
+    </Canvas>
+</UserControl>
