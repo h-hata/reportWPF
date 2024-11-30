@@ -31,6 +31,9 @@ namespace Win11Preview
             invoice.Company.Text = mydata.name.ToString();
             invoice.Amount.Text = String.Format("{0:#,0} 円", mydata.amount);
             invoice.Memo.Text = mydata.memo.ToString();
+            invoice.DataGrid1.Items.Clear();
+            invoice.DataGrid1.Items.Add(new { Name = "田中太郎", Age = 30, Address = "東京都中央区" });
+            invoice.DataGrid1.Items.Add(new { Name = "山田花子", Age = 25, Address = "千葉県市川市" });
             //ページ設定
             var doc = new FixedDocument();
             page.Children.Add(invoice);
