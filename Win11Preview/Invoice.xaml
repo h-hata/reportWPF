@@ -18,10 +18,16 @@
         <TextBlock x:Name="Number" Canvas.Left="94" TextWrapping="Wrap" Text="Invoice#" Canvas.Top="200" FontSize="20"/>
         <TextBlock x:Name="Address" Canvas.Left="94" TextWrapping="Wrap" Text="Address" Canvas.Top="250" FontSize="20"/>
         <TextBlock x:Name="Company" Canvas.Left="94" TextWrapping="Wrap" Text="Company" Canvas.Top="300" FontSize="20" />
-        <Label x:Name="lanel2" Content="請求金額" Canvas.Left="94"  Canvas.Top="350" FontSize="20" HorizontalAlignment="Left"/>
+        <Label x:Name="label2" Content="請求金額" Canvas.Left="94"  Canvas.Top="350" FontSize="20" HorizontalAlignment="Left"/>
         <TextBlock x:Name="Amount" Canvas.Left="250" TextWrapping="Wrap" Text="Amount" Canvas.Top="350" FontSize="20"/>
-
-        <Label x:Name="lanel3" Content="品名" Canvas.Left="94"  Canvas.Top="400" FontSize="20" HorizontalAlignment="Left"/>
+        <Label x:Name="label3" Content="品名" Canvas.Left="94"  Canvas.Top="400" FontSize="20" HorizontalAlignment="Left"/>
         <TextBlock x:Name="Memo" Canvas.Left="250" TextWrapping="Wrap" Text="Memo" Canvas.Top="450" FontSize="20"/>
+        <DataGrid x:Name="DataGrid1" AutoGenerateColumns="False" Canvas.Top="600" Canvas.Left="100" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="100"/>
+                <DataGridTextColumn Header="Age" Binding="{Binding Age}"  Width="50"/>
+                <DataGridTextColumn Header="Address" Binding="{Binding Address}" Width="300"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Canvas>
 </UserControl>
